@@ -1,4 +1,4 @@
-package flaty.swordToOffer._10斐波那契数列;
+package flaty.swordToOffer._10_1斐波那契数列;
 
 /**
  * @author flaty

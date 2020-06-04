@@ -1,4 +1,4 @@
-package flaty.swordToOffer._10斐波那契数列;
+package flaty.swordToOffer._10_2青蛙跳台阶._10斐波那契数列;
 
 /**
  * @author flaty
