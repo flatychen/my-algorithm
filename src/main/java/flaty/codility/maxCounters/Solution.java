@@ -9,16 +9,18 @@ public class Solution {
     public int[] solution(int N, int[] A) {
         // write your code in Java SE 8
         int[] result = new int[N];
-        int allCounter = 0;
+        int lastMaxNum = 0;
         for (int i = 0; i < A.length; i++) {
             if (A[i] <= N) {
                 result[A[i]-1] += 1;
             } else {
-                allCounter++;
+                lastMaxNum = A[i];
             }
         }
         for (int i = 0; i < N; i++) {
-            result[i] += allCounter;
+            if (result[i] < lastMaxNum) {
+                result[i] += lastMaxNum;
+            }
         }
         return result;
     }
