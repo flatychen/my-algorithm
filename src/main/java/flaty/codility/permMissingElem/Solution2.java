@@ -7,11 +7,12 @@ package flaty.codility.permMissingElem;
 public class Solution2 {
     public int solution(int[] a) {
         // write your code in Java SE 8
-        long sum = (a.length+1) * (a.length + 2) / 2;
+        long l = a.length;
+        long sum = (l+1) * (l + 2) / 2;
         for (int i = 0; i < a.length; i++) {
             sum -= a[i];
         }
-        return Integer.parseInt(sum+"");
+        return (int)sum;
     }
 
 }

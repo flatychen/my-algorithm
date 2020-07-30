@@ -16,7 +16,7 @@ public class Solution {
         }
         int prefixSum = 0, suffixeSum = 0;
         int minDifference = 0;
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < a.length-1; i++) {
             prefixSum += a[i];
             suffixeSum = sum - prefixSum;
             int temp = Math.abs(prefixSum - suffixeSum);
@@ -31,7 +31,7 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        int a[] = {2, 20001};
+        int a[] = {-1000, 1000};
         System.out.println(new Solution().solution(a));;
     }
 }
