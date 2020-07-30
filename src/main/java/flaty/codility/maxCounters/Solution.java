@@ -19,7 +19,7 @@ public class Solution {
         }
         for (int i = 0; i < N; i++) {
             if (result[i] < lastMaxNum) {
-                result[i] += lastMaxNum;
+                result[i] = lastMaxNum;
             }
         }
         return result;
