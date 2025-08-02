@@ -1,38 +1,26 @@
 package flaty.sort;
 
+import java.util.Arrays;
+
 /**
- * 
- * 
  * 选择排序
- * 
+ *
  * @author flatychen
- * 
  */
-public class  SelectionSort extends AbstractSort implements Sortable {
+public class SelectionSort extends AbstractSort {
 
-	public void sort(Comparable[] c) {
+    public void sort(int[] c) {
+        int minIndex = 0;
+        for (int i = 0; i < c.length; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < c.length; j++) {
+                if (c[j] < c[minIndex]) {
+                    minIndex=j;
+                }
+            }
+            super.swap(c, i, minIndex);
+        }
+    }
 
-		int minPos = 0;
-		
-		for (int currentPos = 0; currentPos < c.length; currentPos++) {
-			minPos = currentPos;
-			// find the min object
-			for (int j = currentPos + 1; j < c.length; j++) {
-				if (super.less(c[j], c[minPos]))
-					minPos = j;
-			}
-			super.swap(c, minPos, currentPos);
-		}
-
-	}
-
-	@Override
-	public void sort(Comparable[] c, int off, int len) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
 
 }
